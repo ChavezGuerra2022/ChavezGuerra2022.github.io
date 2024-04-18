@@ -3,38 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tablas en HTML</title>
+    <title>Practica#5 componentes de bootstrap parte #3</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/jquery-3.7.1.js"></script>
 </head>
 <body>
-    <h1>Nombre: Diego Angel Chavez Guerra 4AVP.</h1><hr>
-    <h1>Manejo de tablas HTML</h1><br>
-    <table border="2">
-        <thead>
-            <tr>
-                <th>Numero de control:</th>
-                <th>Nombre:</th>
-                <th>Especialidad:</th>
-             </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>22325061070327</td>
-                <td>Diego Angel Chavez Guerra</td>
-                <td>Programacion</td>
-             </tr>
-             <tr>
-                <td>22325061070570</td>
-                <td>Angel Santiago Pou Mapula</td>
-                <td>Programacion</td>
-             </tr>
-             <tr>
-                <td>22325061070344</td>
-                <td>Ekain Israel Cervera Rodriguez</td>
-                <td>Programacion</td>
-             </tr>
+    <h1>Diego Angel Chavez Guerra 4AVP</h1><hr>
 
+    <h1>Componentes de bootstrap parte #3</h1><hr>
+    <nav class="navbar navbar-expand-lg navbar-light" style="background-color: gold;">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">CETIS 107</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Informacion</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Opciones
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Especialidades</a></li>
+                  <li><a class="dropdown-item" href="#">Instalaciones</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Inscripcion</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Alumno</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="#" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row">
+            <h1>Bienbenido a mi pagina que solo copie </h1>
+            <img src="imgpractica5.jpg" alt="">
 
-        </tbody>
-    </table>
+        </div>    
+
+    </div>
+    <footer>
+        CETIS 107 v1.0 &copy; 2024 - Diego A. Chavez Guerra
+    </footer>
+    <script src="js/bootstrap.js"></script>
 </body>
 </html>
