@@ -29,6 +29,49 @@
             </div>
         </div>
     </div>
+
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col">
+                <h3>SELECT alumno.nombre, alumno.apellido1, alumno.apellido2 <br>
+                    FROM alumno <br>
+                    WHERE alumno.beca='si';</h3>
+                <p>Consulta #3. Obtener listado (nombre y apellido) de alumnos que tienen beca.</p>
+                <img src="consulta3.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col">
+                <h3>SELECT profesor.nombre, profesor.apellido1, profesor.apellido2, tlfcontactoprof.telefono <br>
+                    FROM profesor <br>
+                    INNER JOIN tlfcontactoprof <br>
+                    ON profesor.idProfesor= tlfcontactoprof.idProfesor;</h3>
+                <p>Consulta #4. Obtener listado de profesores (nombre, apellido y su numero de contacto.)</p>
+                <img src="consulta4.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="container">
+        <div class="row mt-2">
+            <div class="col">
+                <h3>SELECT alumno.* <br>
+                    FROM alumno <br>
+                    INNER JOIN matricula ON alumno.idAlumno = matricula.idAlumno <br>
+                    INNER JOIN asignatura ON matricula.idAsignatura = asignatura.idAsignatura <br>
+                    WHERE asignatura.nombre = "Programacion" <br>
+                    </h3>
+                <p>Consulta #5. Obtener listado de alumnos (todos los campos) que estan inscritos a la signatura d programacion. </p>
+                <img src="consulta5.png" alt="" class="img-fluid">
+            </div>
+        </div>
+    </div>
+    
+
     <script src="js/bootstrap.js"></script>
 </body>
 </html>
