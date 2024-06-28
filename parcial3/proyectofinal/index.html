@@ -107,13 +107,13 @@
         <div class="row mt-2">
             <div class="col">
                 <h3>SELECT <br>
-                    alumno.*
-                FROM
-                    alumno
-                INNER JOIN matricula ON alumno.idAlumno = matricula.idAlumno
-                INNER JOIN asignatura ON matricula.idAsignatura = asignatura.idAsignatura
-                WHERE
-                    asignatura.coordinador = 'PR016'
+                    alumno.* <br>
+                FROM<br>
+                    alumno <br>
+                INNER JOIN matricula ON alumno.idAlumno = matricula.idAlumno <br>
+                INNER JOIN asignatura ON matricula.idAsignatura = asignatura.idAsignatura <br>
+                WHERE <br>
+                    asignatura.coordinador = 'PR016' <br>
                     </h3>
                 <p>Consulta #8. Obtener listado de alumnos que les da clase el profesor con id PR048 (Jose Manual), sin importar en que asignatura este inscrito. </p>
                 <img src="consulta5.png" alt="" class="img-fluid">
@@ -125,27 +125,27 @@
     <div class="container">
         <div class="row mt-2">
             <div class="col">
-                <h3>SELECT
-                    c.idCurso,
-                    c.nombreDescriptivo AS nombre_curso,
-                    a.idAsignatura,
-                    a.nombre AS nombre_asignatura,
-                    p.idProfesor,
-                    p.nombre AS nombre_profesor,
-                    p.apellido1 AS apellido1_profesor,
-                    p.apellido2 AS apellido2_profesor
-                FROM
-                    curso c
-                JOIN asignatura a ON
-                    c.idCurso = a.curso
-                JOIN impartir i ON
-                    a.idAsignatura = i.idAsignatura
+                <h3>SELECT <br>
+                    c.idCurso, <br>
+                    c.nombreDescriptivo AS nombre_curso, <br>
+                    a.idAsignatura, <br>
+                    a.nombre AS nombre_asignatura, <br>
+                    p.idProfesor, <br>
+                    p.nombre AS nombre_profesor, <br>
+                    p.apellido1 AS apellido1_profesor, <br>
+                    p.apellido2 AS apellido2_profesor <br>
+                FROM <br>
+                    curso c <br>
+                JOIN asignatura a ON <br>
+                    c.idCurso = a.curso <br>
+                JOIN impartir i ON <br>
+                    a.idAsignatura = i.idAsignatura <br>
                 JOIN profesor p ON
-                    i.idProfesor = p.idProfesor
-                ORDER BY
-                    c.idCurso,
-                    a.idAsignatura,
-                    p.idProfesor;
+                    i.idProfesor = p.idProfesor <br>
+                ORDER BY <br>
+                    c.idCurso, <br>
+                    a.idAsignatura,<br>
+                    p.idProfesor; <br>
                     </h3>
                 <p>Consulta #9. Obtener listado de alumnos (todos los campos) que estan inscritos a la signatura d programacion. </p>
                 <img src="consulta5.png" alt="" class="img-fluid">
@@ -157,36 +157,36 @@
     <div class="container">
         <div class="row mt-2">
             <div class="col">
-                <h3>SELECT
-                    al.idAlumno,
-                    al.nombre AS nombre_alumno,
-                    al.apellido1 AS apellido1_alumno,
-                    al.apellido2 AS apellido2_alumno,
-                    a.idAsignatura,
-                    a.nombre AS nombre_asignatura,
-                    p.idProfesor,
-                    p.nombre AS nombre_profesor,
-                    p.apellido1 AS apellido1_profesor,
-                    p.apellido2 AS apellido2_profesor,
-                    c.idCurso,
-                    c.nombreDescriptivo AS nombre_curso
-                FROM
-                    alumno al
-                JOIN matricula m ON
-                    al.idAlumno = m.idAlumno
-                JOIN asignatura a ON
-                    m.idAsignatura = a.idAsignatura
-                JOIN impartir i ON
-                    a.idAsignatura = i.idAsignatura
-                JOIN profesor p ON
-                    i.idProfesor = p.idProfesor
-                JOIN curso c ON
-                    a.curso = c.idCurso
-                ORDER BY
-                    al.idAlumno,
-                    a.idAsignatura
+                <h3>SELECT <br>
+                    al.idAlumno, <br>
+                    al.nombre AS nombre_alumno, <br>
+                    al.apellido1 AS apellido1_alumno, <br>
+                    al.apellido2 AS apellido2_alumno, <br>
+                    a.idAsignatura, <br>
+                    a.nombre AS nombre_asignatura, <br>
+                    p.idProfesor, <br>
+                    p.nombre AS nombre_profesor, <br>
+                    p.apellido1 AS apellido1_profesor, <br>
+                    p.apellido2 AS apellido2_profesor, <br>
+                    c.idCurso, <br>
+                    c.nombreDescriptivo AS nombre_curso <br>
+                FROM <br>
+                    alumno al <br>
+                JOIN matricula m ON <br>
+                    al.idAlumno = m.idAlumno <br>
+                JOIN asignatura a ON <br>
+                    m.idAsignatura = a.idAsignatura <br>
+                JOIN impartir i ON <br>
+                    a.idAsignatura = i.idAsignatura <br>
+                JOIN profesor p ON <br>
+                    i.idProfesor = p.idProfesor <br>
+                JOIN curso c ON <br>
+                    a.curso = c.idCurso <br>
+                ORDER BY <br>
+                    al.idAlumno, <br>
+                    a.idAsignatura <br>
                     </h3>
-                <p>Consulta #10. Obtener listado de alumnos (todos los campos) que estan inscritos a la signatura d programacion. </p>
+                <p>Consulta #10 </p>
                 <img src="consulta5.png" alt="" class="img-fluid">
             </div>
         </div>
