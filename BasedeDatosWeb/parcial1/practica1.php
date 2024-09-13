@@ -3,6 +3,8 @@
     $nombre = $_GET["nombre"];
     $edad = $_GET["edad"];
     $escuela = $_GET["escuela"];
+    $sexo = $_GET["sexo"];
+    $semestre = $_GET["semestre"];
     //obtienen los valores
 
     if($edad > 18){
@@ -16,6 +18,10 @@
     echo "<h2>Edad: ".$edad."</h2>";
 
     echo "<h2>Escuela: ".$escuela."</h2>";
+
+    echo "<h2>Sexo: ".$sexo."</h2>";
+
+    echo "<h2>Semestre: ".$semestre."</h2>";
 
     //Imprimir el valor de esos campos
 
