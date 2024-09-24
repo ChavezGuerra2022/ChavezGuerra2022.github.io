@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Examen en línea</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <div class="container">
+        <form action="practica4.php" method="POST">
+            <div class="row" style="background-color: red">
+                <h1 style="color: white;">Exámen de las caricaturas "Bob Esponja" y "El Chavo del Ocho"</h1><hr>
+                    
+                
+                
+                <div class="card mb-4">
+                        <div class="card-header" style="background-color: yellow;">
+                        1. ¿Dónde vive Bob Esponja?
+                        </div>
+                        <div class="card-body" style="background-color: orange;">
+                            <p><input type="radio" name="pregunta1" value="En una piña" required>  En una piña</p>
+                            <p><input type="radio" name="pregunta1" value="En una casa extraña" required>  En una casa extraña </p>
+                            <p><input type="radio" name="pregunta1" value="Debajo de una piedra" required >  Debajo de una piedra </p>
+                        </div>
+                    </div>
+                    <div class="card p-4 mb-4" style="background-color: yellow;">
+                        <p>
+                            2. ¨Fue sin querer <input type="text" name="pregunta2" value="" required>.¨
+
+                        </p>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: yellow;">
+                        3. 
+                        ¿Qué le gusta comer al Chavo? (Selecciona 2)
+                        </div>
+                        <div class="card-body" style="background-color: orange;">
+                            <p><input type="checkbox" name="pregunta3[]" value="Tortas de jamon"> Tortas de jamón </p>
+                            <p><input type="checkbox" name="pregunta3[]" value="Hamburguesas"> Hamburguesas </p>
+                            <p><input type="checkbox" name="pregunta3[]" value="tacos"> Tacos </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: yellow;">
+                        4. ¿Cuál es el nombre del restaurante donde trabaja Bob Esponja?
+                        </div>
+                        <div class="card-body" style="background-color: orange;">
+                            <p><input type="radio" name="pregunta4" value="Crustáceo Crujiente;" required> Crustáceo Crujiente </p>
+                            <p><input type="radio" name="pregunta4" value="Crustáceo Marino" required> Crustáceo Marino </p>
+                            <p><input type="radio" name="pregunta4" value="Crustáceo Cascarudo" required > Crustáceo Cascarudo </p>
+                        </div>
+                    </div>
+                    <div class="card p-4 mb-4" style="background-color: yellow;">
+                        <p>
+                            5. “Bueno, pero no te <input type="text" name="pregunta5" value="" required> .”
+
+                        </p>
+                    </div>
+
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: yellow;">
+                        6. ¿Quién es el mejor amigo de Bob Esponja?
+                        </div>
+                        <div class="card-body" style="background-color: orange;">
+                            <p><input type="radio" name="pregunta6" value="Calamardo" required> Calamardo </p>
+                            <p><input type="radio" name="pregunta6" value="Don Cangrejo" required> Don Cangrejo </p>
+                            <p><input type="radio" name="pregunta6" value="Patricio" required > Patricio </p>
+                        </div>
+                    </div>
+                    <div class="card p-4 mb-4" style="background-color: yellow;">
+                        <p>
+                            7. “¡Ya cállate, cállate, cállate, que me <input type="text" name="pregunta7" value="" required> !”
+
+                        </p>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: yellow;">
+                        8. ¿Cuál es el apodo de Doña Clotilde? (Selecciona 2)
+                        </div>
+                        <div class="card-body" style="background-color: orange;">
+                            <p><input type="checkbox" name="pregunta8[]" value="La Bruja del 71"> La Bruja del 71 </p>
+                            <p><input type="checkbox" name="pregunta8[]" value="La Chilindrina"> La Chilindrina </p>
+                            <p><input type="checkbox" name="pregunta8[]" value="La Vieja Chancluda" > La Vieja Chancluda </p>
+                        </div>
+                    </div>
+                    <div class="card mb-4">
+                        <div class="card-header" style="background-color: yellow;">
+                        9. ¿Cómo se llama la mascota de Bob Esponja?
+                        </div>
+                        <div class="card-body" style="background-color: orange;">
+                            <p><input type="radio" name="pregunta9" value="Mery" required> Mery </p>
+                            <p><input type="radio" name="pregunta9" value="Cory" required> Cory </p>
+                            <p><input type="radio" name="pregunta9" value="Gary" required> Gary </p>
+                        </div>
+                    </div>
+                    <div class="card p-4 mb-4" style="background-color: yellow;">
+                        <p>
+                            10. ¨Se me <input type="text" name="pregunta10" value="" required>.¨
+                        </p>
+                    </div>
+            </div>
+            <br><input type="submit" class="btn btn-primary" value="Terminar examen" style="background-color: red;">
+        </form>
+    </div>
+</body>
+</html>
