@@ -1,119 +1,153 @@
-const gameended=false;
-const testo=document.getElementById("testo");
-const grid=document.getElementById("grid");
-function check(pos){
-    if(!(document.getElementById("c"+pos).value=="x" || document.getElementById("c"+pos).value=="o")){
-        console.log(document.getElementById("c"+pos).value)
-        document.getElementById("c"+pos).value="";
-    }
+function validar(posicion){
+    var cuadro = document.getElementById("cuadro"+posicion);
+    if(cuadro.value !="x" && cuadro.value !="o"){
+        console.log(cuadro.value + "-- No es un vallor válido");
+        cuadro.value = '';
+        return;
+    }else{
+        var cuadro1 = document.getElementById("cuadro1");
+        var cuadro2 = document.getElementById("cuadro2");
+        var cuadro3 = document.getElementById("cuadro3");
+        var cuadro4 = document.getElementById("cuadro4");
+        var cuadro5 = document.getElementById("cuadro5");
+        var cuadro6 = document.getElementById("cuadro6");
+        var cuadro7 = document.getElementById("cuadro7");
+        var cuadro8 = document.getElementById("cuadro8");
+        var cuadro9 = document.getElementById("cuadro9");
+        switch(posicion){
+            case 1:
+                if(cuadro1 == cuadro2 && cuadro1 == cuadro3){
+                    console.log("Ganador --->" + cuadro1)
+                    pintar(1,2,3);
+                }
+                else if(cuadro1 == cuadro5 && cuadro1 == cuadro9){
+                    console.log("Ganador --->" + cuadro1)
+                    pintar(1,5,9);
+                }
+                else if(cuadro1 == cuadro4 && cuadro1 == cuadro7){
+                    console.log("Ganador --->" + cuadro1)
+                    pintar(1,4,7);
+                }
+            break;
 
-    const c1 = document.getElementById("c1");
-    const c2 = document.getElementById("c2");
-    const c3 = document.getElementById("c3");
-    const c4 = document.getElementById("c4");
-    const c5 = document.getElementById("c5");
-    const c6 = document.getElementById("c6");
-    const c7 = document.getElementById("c7");
-    const c8 = document.getElementById("c8");
-    const c9 = document.getElementById("c9");
+            case 2:
+                if(cuadro2 == cuadro1 && cuadro2 == cuadro3){
+                    console.log("Ganador --->" + cuadro2)
+                    pintar(1,2,3);
+                }
+                else if(cuadro2 == cuadro5 && cuadro2 == cuadro8){
+                    console.log("Ganador --->" + cuadro2)
+                    pintar(2,5,8);
+                }              
+            break;
 
+            case 3:
+                if(cuadro3 == cuadro2 && cuadro3 == cuadro1){
+                    console.log("Ganador --->" + cuadro3)
+                    pintar(3,2,1);
+                }
+                else if(cuadro3 == cuadro5 && cuadro3 == cuadro7){
+                    console.log("Ganador --->" + cuadro3)
+                    pintar(3,5,7);
+                }
+                else if(cuadro3 == cuadro6 && cuadro3 == cuadro9){
+                    console.log("Ganador --->" + cuadro3)
+                    pintar(3,6,9);
+                }
+            break;
+
+            case 4:
+                if(cuadro4 == cuadro1 && cuadro4 == cuadro7){
+                    console.log("Ganador --->" + cuadro4)
+                    pintar(1,4,7);
+                }
+                else if(cuadro4 == cuadro5 && cuadro4 == cuadro6){
+                    console.log("Ganador --->" + cuadro4)
+                    pintar(4,5,6);
+                }
+            break;
+
+            case 5:
+                if(cuadro5 == cuadro2 && cuadro5 == cuadro8){
+                    console.log("Ganador --->" + cuadro5)
+                    pintar(5,2,8);
+                }
+                 else if(cuadro5 == cuadro4 && cuadro5 == cuadro6){
+                    console.log("Ganador --->" + cuadro5)
+                    pintar(4,5,6);
+                }
+                else if(cuadro5 == cuadro1 && cuadro5 == cuadro9){
+                    console.log("Ganador --->" + cuadro5)
+                    pintar(1,5,9);
+                }
+                else if(cuadro5 == cuadro3 && cuadro5 == cuadro7){
+                    console.log("Ganador --->" + cuadro5)
+                    pintar(3,5,7);
+                }
+            break;
+
+            case 6:
+                if(cuadro6 == cuadro5 && cuadro6 == cuadro4){
+                    console.log("Ganador --->" + cuadro6)
+                    pintar(6,5,4);
+                }
+                 else if(cuadro6 == cuadro3 && cuadro6 == cuadro9){
+                    console.log("Ganador --->" + cuadro6)
+                    pintar(3,6,9);
+                }
+            break;
+
+            case 7:
+                if(cuadro7 == cuadro4 && cuadro7 == cuadro1){
+                    console.log("Ganador --->" + cuadro7)
+                    pintar(7,4,1);
+                }
+                 else if(cuadro7 == cuadro5 && cuadro7 == cuadro3){
+                    console.log("Ganador --->" + cuadro7)
+                    pintar(5,7,3);
+                }
+                else if(cuadro7 == cuadro8 && cuadro7 == cuadro9){
+                    console.log("Ganador --->" + cuadro7)
+                    pintar(8,7,9);
+                }
+            break;
+
+            case 8:
+                if(cuadro8 == cuadro5 && cuadro8 == cuadro2){
+                    console.log("Ganador --->" + cuadro8)
+                    pintar(8,5,2);
+                }
+                 else if(cuadro8 == cuadro7 && cuadro8 == cuadro9){
+                    console.log("Ganador --->" + cuadro8)
+                    pintar(7,8,9);
+                }
+            break;
+
+            case 9:
+                if(cuadro9 == cuadro5 && cuadro9 == cuadro1){
+                    console.log("Ganador --->" + cuadro9)
+                    pintar(9,5,1);
+                }
+                 else if(cuadro9 == cuadro8 && cuadro9 == cuadro7){
+                    console.log("Ganador --->" + cuadro9)
+                    pintar(7,9,8);
+                }
+                else if(cuadro9 == cuadro6 && cuadro9 == cuadro3){
+                    console.log("Ganador --->" + cuadro9)
+                    pintar(3,6,9);
+                }
+            break;
     
-
-    if(c1.value==c2.value && c1.value==c3.value && c1.value!=""){
-        var val=c1.value;
-        c1.style.backgroundColor="blue";
-        c2.style.backgroundColor="blue";
-        c3.style.backgroundColor="blue";
-        if(val=="x"){
-            endGame("x");
-        }else{
-            endGame("o");
-        }
-    }
-    if(c4.value==c5.value && c4.value==c6.value  && c4.value!=""){
-        var val=c4.value;
-        c4.style.backgroundColor="blue";
-        c5.style.backgroundColor="blue";
-        c6.style.backgroundColor="blue";
-        if(val=="x"){
-            endGame("x");
-        }else{
-            endGame("o");
-        }
-    }
-    if(c7.value==c8.value && c7.value==c9.value && c7.value!=""){
-        var val=c7.value;
-        c7.style.backgroundColor="blue";
-        c8.style.backgroundColor="blue";
-        c9.style.backgroundColor="blue";
-        if(val=="x"){
-            endGame("x");
-        }else{
-            endGame("o");
-        }
-    }
-    if(c1.value==c4.value && c1.value==c7.value && c1.value!=""){
-        var val=c1.value;
-        c1.style.backgroundColor="blue";
-        c4.style.backgroundColor="blue";
-        c7.style.backgroundColor="blue";
-        if(val=="x"){
-            endGame("x");
-        }else{
-            endGame("o");
-        }
-    }
-    if(c2.value==c5.value && c2.value==c8.value && c2.value!=""){
-        var val=c2.value;
-        c2.style.backgroundColor="blue";
-        c5.style.backgroundColor="blue";
-        c8.style.backgroundColor="blue";
-        if(val=="x"){
-            endGame("x");
-        }else{
-            endGame("o");
-        }
-    }
-    if(c3.value==c6.value && c3.value==c9.value && c3.value!=""){
-        var val=c3.value;
-        c3.style.backgroundColor="blue";
-        c6.style.backgroundColor="blue";
-        c9.style.backgroundColor="blue";
-        if(val=="x"){
-            endGame("x");
-        }else{
-            endGame("o");
-        }
-    }
-    if(c1.value==c5.value && c1.value==c9.value && c1.value!=""){
-        var val=c1.value;
-        c1.style.backgroundColor="blue";
-        c5.style.backgroundColor="blue";
-        c9.style.backgroundColor="blue";
-        if(val=="x"){
-            endGame("x");
-        }else{
-            endGame("o");
-        }
-    }
-    if(c3.value==c5.value && c3.value==c7.value && c3.value!=""){
-        var val=c3.value;
-        c3.style.backgroundColor="blue";
-        c5.style.backgroundColor="blue";
-        c7.style.backgroundColor="blue";
-        if(val=="x"){
-            endGame("x");
-        }else{
-            endGame("o");
-        }
-    }
+       }
+   }
 }
 
-function endGame(which){
-    grid.style.display="none";
-    if(which=="x"){
-        testo.innerHTML="LAS Xs HAN GANADO";
-    }else{
-        testo.innerHTML="LAS Os HAN GANADO";
-    }
+function pintar(p1, p2, p3){
+    document.getElementById("cuadro"+p1).style.backgroundColor = "#aac3f9";
+    document.getElementById("cuadro"+p3).style.backgroundColor = "#aac3f9";
+    document.getElementById("cuadro"+p3).style.backgroundColor = "#aac3f9";
+}
+
+function reiniciar(){
+    window.location.href = 'practica7.html';
 }
